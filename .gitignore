@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+
+# Environment files hold secrets and per-deployment configuration: ignore them
+# all, then re-include the committed template.
+.env
+.env.*
+!.env.example
