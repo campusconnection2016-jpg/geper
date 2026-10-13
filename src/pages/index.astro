@@ -1,1 +1,130 @@
+---
+import "../styles/global.css";
+---
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="GEper — Corporate solutions, technology, and business excellence." />
+    <title>GEper | Corporate Solutions</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">GEper<span>.</span></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <p class="eyebrow">BUSINESS · TECHNOLOGY · GROWTH</p>
+        <h1>Building better<br /><span>business futures.</span></h1>
+        <p class="intro">
+          GEper helps businesses move forward through innovative thinking,
+          practical solutions, and a commitment to excellence.
+        </p>
+        <a class="button" href="#contact">Let's Connect ↗</a>
+      </section>
+
+      <section id="about" class="section">
+        <p class="eyebrow">WHO WE ARE</p>
+        <h2>Ideas into impact.</h2>
+        <p>
+          We believe meaningful progress begins with understanding challenges
+          and creating solutions that deliver real value.
+        </p>
+      </section>
+
+      <section id="services" class="section services">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Solutions for progress.</h2>
+        <div class="cards">
+          <article>
+            <span>01</span>
+            <h3>Business Solutions</h3>
+            <p>Practical approaches designed around business needs and goals.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Technology</h3>
+            <p>Technology-driven thinking to improve processes and possibilities.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Growth & Strategy</h3>
+            <p>Structured thinking to help organizations move forward.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <p class="eyebrow">START A CONVERSATION</p>
+        <h2>Let's build something meaningful.</h2>
+        <p>Have a project or business challenge in mind?</p>
+        <a class="button" href="mailto:info@geper.in">Contact GEper ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <a href="/" class="logo">GEper<span>.</span></a>
+      <p>© {new Date().getFullYear()} GEper. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(html) { scroll-behavior: smooth; }
+  :global(body) {
+    margin: 0;
+    background: #0b1020;
+    color: #f4f6fc;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+  }
+  header {
+    min-height: 82px;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #252c40;
+  }
+  .logo { color: #fff; font-size: 28px; font-weight: 800; text-decoration: none; }
+  .logo span, .hero h1 span { color: #73e0bd; }
+  nav { display: flex; gap: 28px; }
+  nav a { color: #d3d9e8; text-decoration: none; font-size: 14px; }
+  nav a:hover { color: #73e0bd; }
+  .hero { min-height: 570px; padding: 110px 10% 100px; background: radial-gradient(ellipse at 80% 20%, #192b46 0%, #0b1020 55%); }
+  .eyebrow { color: #73e0bd; font-size: 12px; font-weight: 700; letter-spacing: 3px; }
+  .hero h1 { margin: 20px 0; font-size: clamp(42px, 7vw, 76px); line-height: 1.12; letter-spacing: -2px; }
+  .intro { max-width: 590px; color: #b8c2d6; font-size: 18px; }
+  .button { display: inline-block; margin-top: 24px; padding: 12px 24px; border-radius: 6px; background: #73e0bd; color: #0b1020; font-weight: 700; text-decoration: none; }
+  .section { padding: 80px 10%; }
+  h2 { margin: 10px 0 20px; font-size: clamp(30px, 4vw, 44px); line-height: 1.2; }
+  .section > p:not(.eyebrow), .contact > p:not(.eyebrow) { max-width: 680px; color: #b8c2d6; }
+  .services { background: #10172a; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 35px; }
+  .cards article { padding: 25px; border: 1px solid #303a51; border-radius: 10px; background: #131c31; }
+  .cards article span { color: #73e0bd; font-weight: 700; }
+  .cards h3 { margin-bottom: 8px; }
+  .cards p { color: #b8c2d6; font-size: 14px; }
+  .contact { padding: 85px 10%; text-align: center; }
+  .contact > p:not(.eyebrow) { margin: auto; }
+  footer { padding: 25px 8%; border-top: 1px solid #252c40; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  footer p { color: #929db3; font-size: 13px; }
+  @media (max-width: 650px) {
+    header { align-items: flex-start; gap: 15px; flex-direction: column; }
+    nav { flex-wrap: wrap; gap: 16px; }
+    .hero { padding: 80px 7%; }
+    .section, .contact { padding: 60px 7%; }
+    .cards { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
